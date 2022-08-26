@@ -45,7 +45,8 @@
             color: white;
             text-decoration: none;
             text-align: left;
-            margin: 5px;
+            margin: auto;
+            padding: 5px;
             border-radius: 5%;
         }
         header>a:hover{
@@ -53,6 +54,7 @@
             text-decoration: underline;
             color: #02f31a;
             background-color: #6ea773a6;
+            transition-duration: 1s;
         }
         a:hover{
             background-color: rgba(250, 235, 215, 0.267);
@@ -114,13 +116,23 @@
             width: auto;
             height: auto;
          }
-        main>iframe{
+         
+        div.video{
             background-color:#027a0b ;
-            max-width: 100%;
-            max-height: 100%;
-            color: #027a0b;
-            border: 50px solid darkgreen;
+            margin: 0px -20px 30px -20px;
+            padding: 20px;
+            padding-bottom: 58%;
+            position: relative;
+        
         }
+        div.video > iframe{
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            width: 90%;
+            height: 90%;
+        }
+
         div{
             outline: 1px,100px,10px,100px;
             padding: 0px 1px 1px 1px;
@@ -177,16 +189,12 @@
             margin: 0%;
             background-color: darkgreen;
         }
-        main > .bug{
-            margin-left: 180px;
-            margin-right: 180px;
-            max-width: 560px;
-            max-height: 215;
-            width: auto;
-            height: auto;
-
-
+        main .bug{
+            width: 50%;
+            display: block;
+            margin: auto;
         }
+        
     </style>
 </head>
 <body>
@@ -211,10 +219,16 @@
             <p>A ideia de ter um mascote foi amadurecendo e a missão foi passada para uma profissional da área. A ilustradora Russa <a href="https://www.irinablok.com/android" target="_blank">Irina Blok</a>, também funcionária do Google, ficou com a missão de representar o pequeno robô de uma maneira mais agradável.</p>
             <img src="irina-blokFULL.jpg" alt="irina">
             <p>A ideia principal da Irina era representar tudo graficamente com poucos traços e de forma mais chapada. O desenho também deveria gerar identificação rápida com quem o olha. Surgiu então o <strong>Bugdroid</strong>, o novo mascote do Android.</p>
-            <img class="bug" src="bugdroidFULL.png" alt="bugdroid">
+
+            <picture>
+                <source media="(max-width: 400px)" srcset="bugdroid.png">
+                <img class="bug" src="bugdroid.png" alt="bugdroid">
+            </picture>
             <p>A principal inspiração para os traços do novo <strong>Bugdroid</strong> veio daqueles bonequinhos que ilustram portas de banheiro para indicar o gênero de cada porta. Conta a lenda que a artista estava criando em sua mesa no escritório do <strong>Google</strong> e olhou para o lado dos banheiros e a identificação foi imediata: simples, limpo, objetivo.</p>
 
-            <iframe width="1200" height="700" src="https://www.youtube.com/embed/l2UDgpLz20M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video"
+                ><iframe width="1200" height="700" src="https://www.youtube.com/embed/l2UDgpLz20M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
 
 
     </main>
